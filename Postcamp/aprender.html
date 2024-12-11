@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/script.css">
+    <link rel="stylesheet" href="design/icones.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="design/images/lendo.png" type="image/x-icon">
+    <title>Boumns - Casa</title>
+</head>
+
+<body id="body">
+    <div id="nn">
+        <nav id="navegação">
+            <img src="design/images/lendo.png" alt="Logo" ondragstart="return false">
+            <h1 id="nomeMOSTRAR">---</h1>
+            <div class="search-container">
+                <input class="pesquisar" autocomplete="off" type="text" id="ui" placeholder="Pesquisar..."
+                    onkeypress="checarEnter(event)">
+                <button id="pesq" onclick="verificar()" class="fas fa-search" aria-label="Pesquisar"></button>
+            </div>
+        </nav>
+
+        <div id="navegaçãoBaixo">
+            <!-- <a href="vbs.html"><button id="noticias">Editar VBScript</button></a> -->
+            <a href="casa.html"><button id="noticias">Casa</button></a>
+            <a href="menu.html"><button id="noticias">Menu</button></a>
+        </div>
+    </div>
+    <h1>Saiba o basico sobre algumas linguagens!</h1>
+    <div id="tudoo">
+        <div class="cosa" id="Batch">
+            <div id="juntara">
+                <h1 class="marcar">Batch</h1>
+                <img src="design/images/image/BatchLogo.png" id="logotipoo">
+            </div>
+            <br>
+            <br>
+            <p id="aaa">Objetos: </p>
+            <div id="ssss">
+                <div id="cdd">
+                    <code id="cmdd">Echo</code>
+                    <code> - Mensagem</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Start </code>
+                    <code> - Inicia um programa/site</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Del</code>
+                    <code> - Deleta arquivos</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Systeminfo</code>
+                    <code> - Sobre o computador</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Call</code>
+                    <code> - Chama um arquivo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">If</code>
+                    <code> - Condição SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else if</code>
+                    <code> - Condição CASO CONTRARIO SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else</code>
+                    <code> - Condição CASO CONTRARIO NENHUMA DAS ALTERNATIVAS ACIMA, irá acontecer algo</code>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="comandoss">
+                    <p id="aaa">Hello World em <i class="batchI"></i>: </p>
+                    <pre>@echo off
+<strong id="cmdes">echo Hello, World!</strong>
+pause</pre>
+                </div>
+                <div class="comandoss">
+                    <p id="aaa">If, Else if e Else em <i class="batchI"></i>: </p>
+                    <pre>@echo off
+echo Olá!
+set /p falar="-"
+<strong id="cmdes">
+if /i "%falar%"=="ola" (
+    echo Voce falou ola
+) else if /i "%falar%"=="oi" (
+    echo Voce falou oi
+) else (
+    echo Voce falou outra coisa
+)
+</strong>
+pause</pre>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="cosa" id="C++">
+            <div id="juntara">
+                <h1 class="marcar">C++</h1>
+                <img src="design/images/image/CppLogo.png" class="cpp" id="logotipoo">
+            </div>
+            <br>
+            <br>
+            <p id="aaa">Objetos: </p>
+            <div id="ssss">
+                <div id="cdd">
+                    <code id="cmdd">Cout</code>
+                    <code> - Mensagem</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Cin</code>
+                    <code> - Caixa de pergunta</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">#include</code>
+                    <code> - Adicionar biblioteca</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Int</code>
+                    <code> - Variavel</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">While</code>
+                    <code> - Loop</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">If</code>
+                    <code> - Condição SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else if</code>
+                    <code> - Condição CASO CONTRARIO SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else</code>
+                    <code> - Condição CASO CONTRARIO NENHUMA DAS ALTERNATIVAS ACIMA, irá acontecer algo</code>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="comandoss">
+                    <p id="aaa">Hello World em <i class="cppI"></i>: </p>
+                    <pre>#include &lt;iostream&gt;
+
+int main() {
+<strong id="cmdes">    cout &lt;&lt; "Hello, World!";</strong>
+    return 0
+}</pre>
+                </div>
+                <div class="comandoss">
+                    <p id="aaa">If, Else if e Else em <i class="cppI"></i>: </p>
+                    <pre>#include &lt;iostream&gt;
+#include  &lt;string&gt;
+
+int main() {
+    std::string valor;
+    std::cout << "Olá!";
+
+    std::cin >> valor;
+    <strong id="cmdes">
+    if (valor == "ola") {
+        std::cout << "Você disse ola!";
+    } else if (valor == "oi") {
+        std::cout << "Você disse oi!";
+    } else {
+        std::cout << "Você disse outra coisa!";
+    }
+    </strong>
+    return 0;
+}
+</pre>
+
+<!--#include <iostream>
+#include <string>
+
+int main() {
+    std::string valor;
+
+    std::cout << "Olá!";
+    std::cin >> valor;
+
+    if (valor == "ola") {
+        std::cout << "Você disse ola!";
+    } else if (valor == "oi") {
+        std::cout << "Você disse oi!";
+    } else {
+        std::cout << "Você disse outra coisa!";
+    }
+
+    return 0;
+}-->
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="cosa" id="C">
+            <div id="juntara">
+                <h1 class="marcar">C</h1>
+                <img src="design/images/image/CLogo.png" class="c" id="logotipoo">
+            </div>
+            <br>
+            <br>
+            <p id="aaa">Objetos: </p>
+            <div id="ssss">
+                <div id="cdd">
+                    <code id="cmdd">printf</code>
+                    <code> - Mensagem</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">scanf</code>
+                    <code> - Caixa de pergunta</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">#include</code>
+                    <code> - Adicionar biblioteca</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Int</code>
+                    <code> - Variavel</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">While</code>
+                    <code> - Loop</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">If</code>
+                    <code> - Condição SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else if</code>
+                    <code> - Condição CASO CONTRARIO SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else</code>
+                    <code> - Condição CASO CONTRARIO NENHUMA DAS ALTERNATIVAS ACIMA, irá acontecer algo</code>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="comandoss">
+                    <p id="aaa">Hello World em <i class="cI"></i>: </p>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main() {
+<strong id="cmdes">    printf("Hello, World!");</strong>
+    return 0
+}</pre>
+                </div>
+                <div class="comandoss">
+                    <p id="aaa">If, Else if e Else em <i class="cI"></i>: </p>
+                    <pre>#include &lt;stdio.h&gt;
+#include  &lt;string.h&gt;
+
+int main() {
+    char valor[10];
+
+    printf("Olá!");
+    scanf("%9s", valor);
+    <strong id="cmdes">
+    if (strcmp(valor, "oi") == 0) {
+        printf("Você falou oi!\n");
+    } else if (strcmp(valor, "ola") == 0) {
+        printf("Você falou ola!\n");
+    } else {
+        printf("Você disse outra coisa!\n");
+    }
+    </strong>
+    return 0;
+}
+</pre>
+
+<!--#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char valor[10];
+
+    printf("Olá!");
+    scanf("%9s", valor);
+
+    if (strcmp(valor, "oi") == 0) {
+        printf("Você falou oi!\n");
+    } else if (strcmp(valor, "ola") == 0) {
+        printf("Você falou ola!\n");
+    } else {
+        printf("Você disse outra coisa!\n");
+    }
+
+    return 0;
+}-->
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="cosa" id="JS">
+            <div id="juntara">
+                <h1 class="marcar">JavaScript / JS</h1>
+                <img src="design/images/image/JsLogo.png" class="js" id="logotipoo">
+            </div>
+            <br>
+            <br>
+            <p id="aaa">Objetos: </p>
+            <div id="ssss">
+                <div id="cdd">
+                    <code id="cmdd">console.log</code>
+                    <code> - Mensagem</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Function</code>
+                    <code> - Função</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Alert / Prompt / Confirm</code>
+                    <code> - Mensagem direta pelo navegador</code>
+                    <button onclick="alert('Isso é um alert'); prompt('Isso é um prompt'); confirm('Isso é um confirm');">Ver exemplo</button>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">let / const / var</code>
+                    <code> - Variaveis</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">While</code>
+                    <code> - Loop</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">If</code>
+                    <code> - Condição SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else if</code>
+                    <code> - Condição CASO CONTRARIO SE acontecer algo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Else</code>
+                    <code> - Condição CASO CONTRARIO NENHUMA DAS ALTERNATIVAS ACIMA, irá acontecer algo</code>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="comandoss">
+                    <p id="aaa">Hello World em <i class="jsI"></i>: </p>
+                    <pre><strong id="cmdes">console.log("Hello, World!");</strong></pre>
+                </div>
+                <div class="comandoss">
+                    <p id="aaa">If, Else if e Else em <i class="jsI"></i>: </p>
+                    <pre>
+let numero = "oi";
+                        <strong id="cmdes">
+if (numero === "ola") {
+    console.log("ola");
+} else if (numero === "oi") {
+    console.log("oi");
+} else {
+    console.log("Outra coisa");
+}</strong></pre>
+
+<!---->
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="cosa" id="HTML">
+            <div id="juntara">
+                <h1 class="marcar">HTML</h1>
+                <img src="design/images/image/HtmlLogo.png" class="html" id="logotipoo">
+            </div>
+            <br>
+            <br>
+            <p id="aaa">Objetos: </p>
+            <div id="ssss">
+                <div id="cdd">
+                    <code id="cmdd">&lt;h1&gt;&lt;/h1&gt;</code>
+                    <code> - Titulo (h1, h2, h3, h4, h5, h6)</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">&lt;p&gt;&lt;/p&gt;</code>
+                    <code> - Paragrafo</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">&lt;script&gt;&lt;/script&gt;</code>
+                    <code> - Adicionar um script do JavaScript</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">&lt;style&gt;&lt;/style&gt;</code>
+                    <code> - Adicionar um script de css</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">&lt;div&gt;&lt;/div&gt;</code>
+                    <code> - Container genérico</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">&lt;pre&gt;&lt;/pre&gt;</code>
+                    <code> - Texto pré formatado</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">&lt;code&gt;&lt;/code&gt;</code>
+                    <code> - Representar um fragmento de codigo (falar que é um codigo)</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">&lt;br&gt;</code>
+                    <code> - Quebra de linha</code>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="comandoss">
+                    <p id="aaa">Hello World em <i class="HtmlI"></i>: </p>
+                    <pre><strong id="cmdes">&lt;h1&gt;Hello, World!&lt;/h1&gt;</strong></pre>
+                </div>
+                <div class="comandoss">
+                    <p id="aaa">If, Else if e Else em <i class="HtmlI"></i>: </p>
+                    <pre><strong id="cmdes"><b style="color: red;">*Não existe*</b></strong></pre>
+
+<!---->
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="cosa" id="CSS">
+            <div id="juntara">
+                <h1 class="marcar">css</h1>
+                <img src="design/images/image/CssLogo.png" class="css" id="logotipoo">
+            </div>
+            <br>
+            <br>
+            <p id="aaa">Objetos: </p>
+            <div id="ssss">
+                <div id="cdd">
+                    <code id="cmdd">Background-color: ;</code>
+                    <code> - Cor de fundo</code>
+                    <button onclick="fundocor()">Ver exemplo</button>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Color: ;</code>
+                    <code> - Cor do texto</code>
+                    <button onclick="textocor()">Ver exemplo</button>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Border: ;</code>
+                    <code> - Borda / Cor da borda</code>
+                    <button onclick="bordacor()">Ver exemplo</button>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">@Keyframes ( ) { }</code>
+                    <code> - Animação</code>
+                    <button onclick="animacao()">Ver exemplo</button>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">@Media ( ) { }</code>
+                    <code> - Deixar algo responsivo (Tamanho dos dipositivos)</code>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Scale: ;</code>
+                    <code> - Tamanho</code>
+                    <button onclick="tamanho()">Ver exemplo</button>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Font-size: ;</code>
+                    <code> - Tamanho da fonte</code>
+                    <button onclick="fontetamanho()">Ver exemplo</button>
+                </div>
+                <div id="cdd">
+                    <code id="cmdd">Font-family: ;</code>
+                    <code> - Fonte</code>
+                    <button onclick="fonte()">Ver exemplo</button>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="comandoss">
+                    <p id="aaa">Hello World em <i class="CssI"></i>: </p>
+                    <pre><strong id="cmdes"><b style="color: red;">*Não existe*</b></strong></pre>
+                </div>
+                <div class="comandoss">
+                    <p id="aaa">If, Else if e Else em <i class="CssI"></i>: </p>
+                    <pre><strong id="cmdes"><b style="color: red;">*Não existe*</b></strong></pre>
+
+<!---->
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    <script>
+        const nomeUsuario = localStorage.getItem("nomeUsuario");
+        const nomeMostrar = document.getElementById("nomeMOSTRAR");
+        nomeMostrar.textContent = nomeUsuario ? `Bem-vindo ${nomeUsuario}!` : "Bem-vindo!";
+    </script>
+    <!-- <script src="functions/fct.js"></script> -->
+    <script src="scripts/script.js"></script>
+    <!-- <script src="scripts/code/code.js"></script> -->
+    <script src="scripts/conta.js"></script>
+    <script src="scripts/pesquisa.js"></script>
+    <script src="functions/fct.js"></script>
+    <script src="scripts/tests/exemplos.js"></script>
+    <!-- <script src="scripts/cmd/abrir.js"></script> -->
+</body>
+
+</html>

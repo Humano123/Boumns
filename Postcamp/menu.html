@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/script.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="design/images/Ola.png" type="image/x-icon">
+    <title>Boumns - Menu</title>
+</head>
+
+<body>
+    <div id="nn">
+        <nav id="navegação">
+            <img src="design/images/Ola.png" alt="Logo" ondragstart="return false">
+            <h1 id="nomeMOSTRAR">---</h1>
+            <div class="search-container">
+                <input class="pesquisar" autocomplete="off" type="text" id="ui" placeholder="Pesquisar..." onkeypress="checarEnter(event)">
+                <button id="pesq" onclick="verificar()" class="fas fa-search" aria-label="Pesquisar"></button>
+            </div>
+        </nav>
+        
+        <div id="navegaçãoBaixo">
+            <a href="#Noticias"><button id="noticias">Notícias</button></a>
+            <a href="casa.html"><button id="iniciar">Iniciar</button></a>
+            <a href="#Sobre"><button id="sobre">Sobre</button></a>
+        </div>
+    </div>
+        
+<div class="noticia" id="#Noticias">
+    <h1>Noticias</h1>
+    <h3>Parceria com o <a target="_blank" href="https://linktr.ee/GuitarDuck">GuitarDuck</a>!</h3>
+    <br>
+    <p>ás 29/11/2024, 19:54, foi feita a parceria do GuitarDuck com o MeiaHub (geral)</p>
+</div>
+<div class="sobre" id="#Sobre">
+    <h1>Sobre</h1>
+    <br>
+    <h3>PostCamp é á junção do <a target="_blank" href="https://humano123.github.io/Pombohub.com">PomboHub</a>, <a target="_blank" href="https://humano123.github.io/editorvbs">EditorVBS</a>, mas em um (PostCamp).</h3>
+</div>
+    <section id="javascript">
+        <h1>JavaScript</h1>
+        <textarea type="text" id="codigoJs" placeholder="Digite seu código"></textarea>
+        <button onclick="executarJS()">Executar</button>
+    </section>
+
+    <script>
+        const nomeUsuario = localStorage.getItem("nomeUsuario");
+        const nomeMostrar = document.getElementById("nomeMOSTRAR");
+        nomeMostrar.textContent = nomeUsuario ? `Bem-vindo ${nomeUsuario}!` : "Bem-vindo!";
+    </script>
+    <script src="functions/fct.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/code/code.js"></script>
+    <script src="scripts/conta.js"></script>
+    <script src="scripts/cmd/abrir.js"></script>
+</body>
+
+</html>
