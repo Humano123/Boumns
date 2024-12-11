@@ -1,0 +1,65 @@
+.cppI {
+    background-image: url('images/image/CppLogo.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.cI {
+    background-image: url('images/image/Clogo.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    z-index: 1; 
+}
+
+.batchI {
+    background-image: url('images/image/BatchLogo.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.jsI {
+    background-image: url('images/image/JsLogo.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.HtmlI {
+    background-image: url('images/image/HtmlLogo.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.CssI {
+    background-image: url('images/image/CssLogo.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    z-index: 1;
+}

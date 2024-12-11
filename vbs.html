@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/script.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="design/images/QI.png" type="image/x-icon">
+    <title>Boumns - VBS</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #textArea {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ccc;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            resize: vertical;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="nn">
+        <nav id="navegação">
+            <img src="design/images/QI.png" alt="Logo" ondragstart="return false">
+            <h1 id="nomeMOSTRAR">---</h1>
+            <div class="search-container">
+                <input class="pesquisar" autocomplete="off" type="text" id="ui" placeholder="Pesquisar..." onkeypress="checarEnter(event)">
+                <button id="pesq" onclick="verificar()" class="fas fa-search" aria-label="Pesquisar"></button>
+            </div>
+        </nav>
+        <div id="navegaçãoBaixo">
+            <a href="batch.html"><button id="noticias">Editar Batch</button></a>
+            <a href="aprender.html"><button id="noticias">Linguagens</button></a>
+            <a href="casa.html"><button id="noticias">Casa</button></a>
+            <a href="menu.html"><button id="noticias">Menu</button></a>
+        </div>
+    </div>
+    <h1>VBScript</h1>
+    <textarea spellcheck="false" id="textArea" rows="10" cols="30" placeholder="Escreva algo aqui..."></textarea> 
+    <br> 
+    <button class="button" onclick="salvarConteudo()">Baixar</button>
+        
+    <script>
+        function salvarConteudo() {
+            const conteudo = document.getElementById("textArea").value;
+            const nomeArquivo = prompt("Digite o nome do arquivo:");
+            if (nomeArquivo !== null) {
+                const blob = new Blob([conteudo], { type: "text/vbscript" });
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                link.download = nomeArquivo + ".vbs";
+                link.click(); 
+                URL.revokeObjectURL(link.href);
+            }
+        }
+
+        const nomeUsuario = localStorage.getItem("nomeUsuario");
+        const nomeMostrar = document.getElementById("nomeMOSTRAR");
+        nomeMostrar.textContent = nomeUsuario ? `Bem-vindo ${nomeUsuario}!` : "Bem-vindo!";
+    </script>
+
+    <script src="functions/fct.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/code/code.js"></script>
+    <script src="scripts/conta.js"></script>
+    <script src="scripts/cmd/abrir.js"></script>
+    <script src="scripts/phone/nomobile.js"></script>
+</body>
+</html>

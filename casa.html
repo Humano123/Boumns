@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/script.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="design/images/Ola.png" type="image/x-icon">
+    <title>Boumns - Casa</title>
+</head>
+
+<body>
+    <div id="nn">
+        <nav id="navegação">
+            <img src="design/images/Ola.png" alt="Logo" ondragstart="return false">
+            <h1 id="nomeMOSTRAR">---</h1>
+            <div class="search-container">
+                <input class="pesquisar" autocomplete="off" type="text" id="ui" placeholder="Pesquisar..." onkeypress="checarEnter(event)">
+                <button id="pesq" onclick="verificar()" class="fas fa-search" aria-label="Pesquisar"></button>
+            </div>
+        </nav>
+        
+        <div id="navegaçãoBaixo">
+            <a href="vbs.html"><button id="noticias">Editar VBScript</button></a>
+            <a href="aprender.html"><button id="noticias">Linguagens</button></a>
+            <a href="batch.html"><button id="noticias">Editar Batch</button></a>
+            <a href="menu.html"><button id="noticias">Menu</button></a>
+        </div>
+    </div>
+    
+    <section id="javascript">
+        <h1>JavaScript</h1>
+        <textarea type="text" id="codigoJs" placeholder="Digite seu código"></textarea>
+        <button onclick="executarJS()">Executar</button>
+    </section>
+
+    <script>
+        const nomeUsuario = localStorage.getItem("nomeUsuario");
+        const nomeMostrar = document.getElementById("nomeMOSTRAR");
+        nomeMostrar.textContent = nomeUsuario ? `Bem-vindo ${nomeUsuario}!` : "Bem-vindo!";
+    </script>
+    <script src="functions/fct.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/code/code.js"></script>
+    <script src="scripts/conta.js"></script>
+    <script src="scripts/cmd/abrir.js"></script>
+</body>
+
+</html>
