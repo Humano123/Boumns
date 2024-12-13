@@ -9,7 +9,7 @@ const currentPage = window.location.pathname.split("/").pop();
 
 if (nomeSalvo) {
     // Se já houver um nome salvo e a página não for "menu.html" ou "casa.html", redireciona para "menu.html"
-    if (currentPage !== "menu.html" && currentPage !== "casa.html" && currentPage !== "vbs.html" && currentPage !== "batch.html" && currentPage !== "aprender.html" && currentPage !== "phone.html" && currentPage !== "404.html" && currentPage !== "html.html") {
+    if (currentPage !== "menu.html" && currentPage !== "casa.html" && currentPage !== "vbs.html" && currentPage !== "batch.html" && currentPage !== "aprender.html" && currentPage !== "phone.html" && currentPage !== "404.html" && currentPage !== "editarHTML.html") {
         window.location.href = "menu.html";
     }
 } else {

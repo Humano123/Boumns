@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="design/script.css">
+  <link rel="stylesheet" href="design/icones.css">
+  <link rel="shortcut icon" href="design/images/QI.png" type="image/x-icon">
+  <title>Editor de Código Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .editor {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .output {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: x-large;
+    }
+
+    textarea::placeholder {
+      color: black;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #html {
+      background-color: rgb(255, 106, 0);
+    }
+
+    #css {
+      background-color: #0071b3;
+    }
+
+    #js {
+      background-color: rgb(243, 214, 0);
+    }
+
+    #titleNome {
+      font-size: larger;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nn">
+    <nav id="navegação">
+      <img src="design/images/QI.png" alt="Logo" ondragstart="return false">
+      <h1 id="nomeMOSTRAR">---</h1>
+      <div class="search-container">
+        <input class="pesquisar" autocomplete="off" type="text" id="ui" placeholder="Pesquisar..."
+          onkeypress="checarEnter(event)">
+        <button id="pesq" onclick="verificar()" class="fas fa-search" aria-label="Pesquisar"></button>
+      </div>
+    </nav>
+    <div id="navegaçãoBaixo">
+      <a href="vbs.html"><button id="noticias">Editar VBScript</button></a>
+      <a href="aprender.html"><button id="noticias">Linguagens</button></a>
+      <a href="casa.html"><button id="noticias">Casa</button></a>
+      <a href="menu.html"><button id="noticias">Menu</button></a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="editor">
+      <h1>Editor de site</h1>
+
+      <textarea spellcheck="false" autocomplete="off" id="html">
+<!--HTML-->
+
+<h1>
+Hello, World!
+</h1>
+
+<button onclick="falar()">
+Aperte!
+</button></textarea>
+
+      <textarea spellcheck="false" autocomplete="off" id="css">
+/* CSS */
+
+body {
+  Color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}</textarea>
+
+      <textarea spellcheck="false" autocomplete="off" id="js">
+//JAVASCRIPT
+
+
+function falar() {
+  alert("Oi!");
+}</textarea>
+
+      <button onclick="runCode()">Executar Código</button>
+    </div>
+    <div class="output">
+      <h1>Resultado</h1>
+      <h1 id="titleNome"></h1>
+      <iframe id="output"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function runCode() {
+      const htmlCode = document.getElementById('html').value;
+      const cssCode = '<style>' + document.getElementById('css').value + '</style>';
+      const jsCode = '<script>' + document.getElementById('js').value + '<' + '/script>';
+      const output = document.getElementById('output');
+      output.srcdoc = htmlCode + cssCode + jsCode;
+
+      // Extrai o título do HTML e atualiza o elemento #titleNome
+      const titleMatch = htmlCode.match(/<title>(.*?)<\/title>/);
+      if (titleMatch) {
+        document.getElementById('titleNome').textContent = titleMatch[1];
+      }
+    }
+  </script>
+
+  <script src="scripts/conta.js"></script>
+</body>
+
+</html>
